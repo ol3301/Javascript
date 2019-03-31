@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+
+    </head>
+
+    <BODY>
+        <textarea id="textarea">
+
+        </textarea> <br>
+        <input type="text" id="ask"> <br>
+        <input type="button" value="Добавить вопрос" onclick="BtnPress()" id="btn">
+
+        <script>
+            function BtnPress(){
+                textarea.value += ask.value + '\n';
+            }
+        </script>
+    </BODY>
+</HTML>
