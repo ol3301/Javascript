@@ -5,16 +5,30 @@
     </head>
 
     <BODY>
-        <textarea id="textarea">
+        <div class="content" id="content">
 
-        </textarea> <br>
-        <input type="text" id="ask"> <br>
-        <input type="button" value="Добавить вопрос" onclick="BtnPress()" id="btn">
+        </div> <br>
+
+        Ваше имя: <input type="text" id="name"> <br>
+        Ваше вообщение: <input type="text" id="mess"> <br>
+        <input type="button" value="Добавить вопрос" onclick="BtnPress(name.value, mess.value);">
 
         <script>
-            function BtnPress(){
-                textarea.value += ask.value + '\n';
+            function BtnPress(head,mess){
+                content.innerHTML += "<div class='mess'>     <div class='head'> "+head+" </div>    <div class='content'> "+mess+" </div>" + 
+                      "</div>";
             }
         </script>
+
+        <style>
+            
+            .mess{
+                border-style:  double;
+                margin: 5px;
+            }
+            .head{
+                border-style:  double;
+            }
+        </style>
     </BODY>
 </HTML>
