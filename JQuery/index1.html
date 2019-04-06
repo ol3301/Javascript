@@ -17,6 +17,7 @@
         <input type="radio" name="rd2" value="5">5 <br>
         <input type="radio" name="rd2" value="6">6 <br>
 
+        <div id="res"></div>
         <input type="button" value="Ответить" onclick="Click()" >
     </body>
 
@@ -24,7 +25,22 @@
 
 
     function Click(){
+        var rds = document.getElementsByName("rd");
+        var rd1s = document.getElementsByName("rd1");
+        var rd2s = document.getElementsByName("rd2");
         
+        var count_true =0
+
+        if(rds[0].checked)
+            count_true++;
+
+        if(rd1s[1].checked)
+            count_true++;
+
+        if(rd2s[0].checked)
+            count_true++;
+
+        res.innerHTML = "правильных ответов "+count_true+" с трех";
     }
 
 
