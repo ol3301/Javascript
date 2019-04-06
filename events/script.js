@@ -1,16 +1,12 @@
-function next(){
-    if(fig1.style['background-color'] == "red"){
-        fig1.style['background-color']="gray"
-        fig2.style['background-color']="yellow";
-    }
-    else if(fig2.style['background-color']=="yellow"){
-        fig2.style['background-color']="gray";
-        fig3.style['background-color']="green";
-    }
-    else if(fig3.style['background-color']=="green"){
-        fig3.style['background-color']="gray"
-    }
-    else{
-        fig1.style['background-color']="red"
-    }
+function onTextChanged(e){
+    t.value = t.value.replace(/\d/g,"");
+}
+
+function WindowWork(){
+    window.alert("123");
+}
+
+function MClick(e){
+    mm.style.left = e.pageX-50 + "px";
+    mm.style.top = e.pageY-50 + "px";
 }
