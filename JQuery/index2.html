@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <input type="checkbox" id="bold">bold  
+        <input type="checkbox" id="underline">underline
+        <input type="checkbox" id="italic">italic  
+        <input type="checkbox" id="left">left 
+        <input type="checkbox" id="right">right  
+        <input type="checkbox" id="justify">justify <br>
+
+        <textarea cols="50" id="text" rows="10"> 123fgrtg trhtyh ty hjty jtj ty hjty</textarea> <br>
+
+        <input type="button" value="show" onclick="Click()">
+        
+        <script>
+            function Click(){
+                text.style["font-weight"] = "";
+                text.style["text-decoration"] = "";
+                text.style["font-style"] = "";
+                text.style["left"] = "";
+                text.style["right"] = "";
+                text.style["text-align"] = "";
+
+
+
+                if(bold.checked)
+                    text.style["font-weight"] = "bold";
+
+                if(underline.checked)
+                    text.style["text-decoration"] = "underline";
+
+                if(italic.checked)
+                    text.style["font-style"] = "italic";
+
+                if(left.checked)
+                    text.style["left"] = "20px";
+
+                if(right.checked)
+                    text.style["right"] = "20px";
+
+                if(justify.checked)
+                    text.style["text-align"] = "justify";
+            }
+        </script>
+    </body>
+</html>
